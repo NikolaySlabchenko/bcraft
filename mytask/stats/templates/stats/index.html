@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика</title>
+</head>
+<body>
+    {% for item in stats %}
+        <div>
+            <p>{{ item.id }}</p>
+            <p>{{ item.date }}</p>
+            <p>{{ item.views }}</p>
+            <p>{{ item.clicks }}</p>
+            <p>{{ item.cost }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
