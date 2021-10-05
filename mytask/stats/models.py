@@ -10,7 +10,7 @@ class Stats(models.Model):
     cpm = models.FloatField(editable=False)
 
     def save(self, *args, **kwargs):
-        self.cost = round(self.cost, 3)
+        self.cost = round(self.cost, 2)
         self.cpc = self.cost/self.clicks
         self.cpm = self.cost/self.views * 1000
         super(Stats, self).save(*args, **kwargs)
